@@ -1,0 +1,17 @@
+name: docker-pipeline.yml-22itl03
+on: push
+jobs:
+  my-job:
+     runs-on: ubuntu-latest
+     steps:
+       - name: print -22itl03 
+         run: echo "Hello World - 22itl03"
+
+      _ name: checkout
+        user: actions/checkout@v4  
+
+      _ name: Docker Build
+        user: docker build -t priyadharshan/ml-model-22itl03 .
+
+      - name: Docker Images
+        run: docker images
